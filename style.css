@@ -266,6 +266,7 @@ body {
   opacity: 0.9;
   margin-bottom: 1.5rem;
   font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
 }
 
 .sobre-lista {
@@ -296,69 +297,12 @@ body {
   flex-shrink: 0;
 }
 
-/* ===== SEÇÃO SERVIÇOS ===== */
-.servicos-section {
-  padding: 4rem 0;
-}
-
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   color: var(--cor-secundaria);
   margin-bottom: 3rem;
   font-weight: 300;
-}
-
-.servicos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.servico-card {
-  background: white;
-  border-radius: var(--border-radius);
-  padding: 2.5rem 2rem;
-  text-align: center;
-  box-shadow: var(--sombra-suave);
-  transition: all 0.3s ease;
-  border-top: 4px solid var(--cor-primaria);
-}
-
-.servico-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--sombra-hover);
-}
-
-.servico-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-hover) 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.servico-icon i {
-  font-size: 2rem;
-  color: white;
-}
-
-.servico-card h3 {
-  font-size: 1.5rem;
-  color: var(--cor-secundaria);
-  margin-bottom: 1rem;
-  font-weight: 400;
-}
-
-.servico-card p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--cor-secundaria);
-  opacity: 0.85;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 /* ===== SEÇÃO LOCALIZAÇÃO ===== */
@@ -420,6 +364,7 @@ body {
   opacity: 0.85;
   line-height: 1.7;
   font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
 }
 
 .local-info a {
@@ -481,6 +426,7 @@ body {
   margin-bottom: 2.5rem;
   line-height: 1.8;
   font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
 }
 
 .cta-buttons {
@@ -622,6 +568,7 @@ footer {
   opacity: 0.9;
   line-height: 1.7;
   font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
 }
 
 .footer-column a {
@@ -651,6 +598,7 @@ footer {
   justify-content: center;
   font-size: 1.3rem;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .social-links a:hover {
