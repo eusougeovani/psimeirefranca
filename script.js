@@ -271,5 +271,13 @@ window.addEventListener('resize', () => {
   currentIndex = 0;
   updateCarousel();
 });
+
+// ===== CARROSSEL INFINITO DE PLANOS =====
+const planosWrapper = document.getElementById('planosWrapper');
+if (planosWrapper) {
+  const planos = planosWrapper.innerHTML;
+  planosWrapper.innerHTML = planos + planos;
+}
+
 // ===== LOG DE INICIALIZAÇÃO =====
 console.log('🧠 Site da Psicóloga Meire França carregado com sucesso!');

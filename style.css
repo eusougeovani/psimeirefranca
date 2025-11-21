@@ -596,6 +596,7 @@ body {
 .carousel-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  justify-content: center;
 }
 
 .review-card {
@@ -724,6 +725,33 @@ body {
   border-radius: 6px;
 }
 
+.button-review {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-review a {
+  background: var(--cor-clara);
+  color: var(--cor-secundaria);
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--sombra-suave);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-review a:hover {
+  background: var(--cor-secundaria);
+  color:  var(--cor-clara);
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-hover);
+}
+
+
 @media (min-width: 993px) {
   .review-card {
     min-width: 50%;
@@ -826,16 +854,6 @@ body {
 
 .contact-card a:hover {
   color: var(--cor-secundaria);
-}
-
-.whatsapp-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.whatsapp-link i {
-  color: #25d366;
 }
 
 .map-container {
@@ -942,6 +960,8 @@ footer {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .social-links a {
@@ -959,7 +979,8 @@ footer {
 }
 
 .social-links a:hover {
-  background: var(--cor-hover);
+  background: var(--cor-secundaria);
+  color: var(--cor-primaria);
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(166,124,82,0.3);
 }
@@ -978,6 +999,57 @@ footer {
   color: var(--cor-primaria);
   font-weight: 600;
   text-decoration: none;
+}
+
+/* ===== CARROSSEL DE PLANOS NO FOOTER ===== */
+.planos-carousel {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.planos-wrapper {
+  display: flex;
+  animation: scrollPlanos 10s linear infinite;
+}
+
+.plano-item {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 60px;
+  margin-right: 20px;
+  background: var(--cor-primaria);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.plano-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scrollPlanos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.planos-carousel:hover .planos-wrapper {
+  animation-play-state: paused;
+}
+
+@media (max-width: 992px) {
+  .plano-item {
+    width: 80px;
+    height: 50px;
+  }
 }
 
 /* ===== RESPONSIVIDADE MOBILE ===== */
