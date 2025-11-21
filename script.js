@@ -155,5 +155,121 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+// ===== CARROSSEL DE DEPOIMENTOS =====
+const wrapper = document.getElementById('carouselWrapper');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const dotsContainer = document.getElementById('carouselDots');
+        
+let currentIndex = 0;
+let slidesToShow = 1;
+let totalSlides = document.querySelectorAll('.review-card').length;
+
+function updateSlidesToShow() {
+  if (window.innerWidth >= 1024) {
+    slidesToShow = 3;
+  } else if (window.innerWidth >= 768) {
+    slidesToShow = 2;
+  } else {
+    slidesToShow = 1;
+  }
+}
+
+function createDots() {
+  dotsContainer.innerHTML = '';
+  const totalDots = Math.ceil(totalSlides / slidesToShow);
+  
+  for (let i = 0; i < totalDots; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function updateDots() {
+  const dots = document.querySelectorAll('.dot');
+  const activeDotIndex = Math.floor(currentIndex / slidesToShow);
+  
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === activeDotIndex);
+  });
+}
+
+function updateCarousel() {
+  const slideWidth = 100 / slidesToShow;
+  wrapper.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+  updateDots();
+}
+
+function goToSlide(index) {
+  currentIndex = index * slidesToShow;
+  updateCarousel();
+}
+
+function nextSlide() {
+  if (currentIndex < totalSlides - slidesToShow) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateCarousel();
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalSlides - slidesToShow;
+  }
+  updateCarousel();
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+// Auto-play
+let autoplayInterval = setInterval(nextSlide, 5000);
+// Pause on hover
+wrapper.addEventListener('mouseenter', () => {
+    clearInterval(autoplayInterval);
+});
+
+wrapper.addEventListener('mouseleave', () => {
+    autoplayInterval = setInterval(nextSlide, 5000);
+});
+
+// Touch support
+let touchStartX = 0;
+let touchEndX = 0;
+
+wrapper.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+wrapper.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  if (touchStartX - touchEndX > 50) {
+    nextSlide();
+  } else if (touchEndX - touchStartX > 50) {
+    prevSlide();
+  }
+}
+// Initialize
+updateSlidesToShow();
+createDots();
+updateCarousel();
+
+// Update on resize
+window.addEventListener('resize', () => {
+  updateSlidesToShow();
+  createDots();
+  currentIndex = 0;
+  updateCarousel();
+});
 // ===== LOG DE INICIALIZAÇÃO =====
 console.log('🧠 Site da Psicóloga Meire França carregado com sucesso!');

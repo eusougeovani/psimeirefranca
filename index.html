@@ -11,27 +11,29 @@
 </head>
 <body>
   <!-- NAVEGAÇÃO FIXA NO TOPO -->
-  <nav class="nav-header">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <img src="img/logoBorboClara.png" alt="Logo Meire França">
-        <span>Meire França</span>
+  <section id="top">
+    <nav class="nav-header">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#top"><img src="img/logoBorboClara.png" alt="Logo Meire França"></a>
+          <a href="#top"><span>Meire França</span></a>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="#sobre">Sobre mim</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#atendimento">Atendimento</a>
+          <a href="#contato">Contato</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#" class="nav-cta">Agendar Consulta</a>
+        </div>
       </div>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-menu">
-        <a href="#home">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#atendimento">Atendimento</a>
-        <a href="#informacoes">Informações</a>
-        <a href="#agende" class="nav-cta">Agendar Consulta</a>
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </section>
 
   <!-- HERO SECTION -->
   <section id="home" class="hero">
@@ -136,30 +138,52 @@
     </div>
   </section>
 
-  <!-- SEÇÃO INFORMAÇÕES -->
-  <section id="informacoes" class="localizacao-section">
+  <!-- SEÇÃO CONTATO -->
+  <section id="contato" class="localizacao-section">
     <div class="container">
       <div class="localizacao-card">
-        <h2>Informações</h2>
-        <div class="local-info">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <h3>Consultório Presencial</h3>
+        <h2>Contato</h2>
+        <!-- Cards de Contato -->
+        <div class="contact-cards">
+          <!-- Card Endereço -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>Endereço</h3>
             <p>
-              <a href="https://maps.app.goo.gl/384cj33NEXNZiuTV8" target="_blank" rel="noopener noreferrer">
-                Av. Ministro Geraldo Barreto Sobral, 2131<br>
-                Centro Médico Jardins, Sala 1212<br>
-                Jardins - Aracaju/SE
-              </a>
+              Av. Ministro Geraldo Barreto Sobral, 2131<br>Centro Médico Jardins, Sala 1212<br>Jardins - Aracaju/SE
             </p>
           </div>
-        </div>
-        <div class="local-info">
-          <i class="fas fa-credit-card"></i>
-          <div>
-            <h3>Formas de Pagamento</h3>
-            <p>Atendimento particular e convênios. Entre em contato para saber valores e condições.</p>
+
+          <!-- Card WhatsApp -->
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Fale Comigo</h3>
+            <div class="social-links">
+              <a href="https://wa.me/5579998556740" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://instagram.com/psimeirefranca" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="mailto:meire_franca@hotmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
           </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.308243696628!2d-37.06556790517198!3d-10.949381516770522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab30f22e6bc4b%3A0xa1b9922b2b368657!2sPrimavera!5e0!3m2!1spt-BR!2sbr!4v1763680668795!5m2!1spt-BR!2sbr" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </div>
@@ -186,26 +210,143 @@
     </div>
   </section>
 
-  <!-- SEÇÃO CTA AGENDAMENTO -->
-  <section id="agende" class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <div class="cta-content">
-          <h2>Pronta para dar o primeiro passo?</h2>
-          <p>Investir em sua saúde mental é investir na sua qualidade de vida. Agende sua consulta e comece sua jornada de autoconhecimento e bem-estar.</p>
-          <div class="cta-buttons">
-            <a href="https://wa.me/5579998556740" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-              <i class="fab fa-whatsapp"></i>
-              WhatsApp
-            </a>
-            <a href="https://instagram.com/psimeirefranca" target="_blank" rel="noopener noreferrer" class="btn-instagram">
-              <i class="fab fa-instagram"></i>
-              Instagram
-            </a>
+  <!-- SEÇÃO AVALIAÇÕES -->
+  <section id="avaliacoes" class="localizacao-section">
+        <div class="container">
+          <div class="localizacao-card">
+            <h2>Avaliações</h2>
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="quote-icon">"</div>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">
+                                Excelente serviço! Superou todas as minhas expectativas. A equipe foi muito profissional e atenciosa do início ao fim. Recomendo fortemente!
+                            </p>
+                            <div class="reviewer-info">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="Maria Silva" class="reviewer-photo">
+                                <div class="reviewer-details">
+                                    <h4>Maria Silva</h4>
+                                    <p>Cliente desde 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="quote-icon">"</div>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">
+                                Simplesmente perfeito! A qualidade do trabalho é impecável e o atendimento é nota 10. Já indiquei para vários amigos e todos adoraram!
+                            </p>
+                            <div class="reviewer-info">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="João Santos" class="reviewer-photo">
+                                <div class="reviewer-details">
+                                    <h4>João Santos</h4>
+                                    <p>Cliente desde 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="quote-icon">"</div>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                            <p class="review-text">
+                                Muito bom! O resultado ficou excelente e dentro do prazo combinado. Só não dou 5 estrelas porque demorou um pouco para responder no início, mas no geral estou muito satisfeita.
+                            </p>
+                            <div class="reviewer-info">
+                                <img src="https://i.pravatar.cc/150?img=5" alt="Ana Costa" class="reviewer-photo">
+                                <div class="reviewer-details">
+                                    <h4>Ana Costa</h4>
+                                    <p>Cliente desde 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="quote-icon">"</div>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">
+                                Profissionalismo e dedicação em cada detalhe. Fiquei impressionado com a atenção que deram ao meu projeto. Com certeza voltarei a fazer negócios!
+                            </p>
+                            <div class="reviewer-info">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="Carlos Oliveira" class="reviewer-photo">
+                                <div class="reviewer-details">
+                                    <h4>Carlos Oliveira</h4>
+                                    <p>Cliente desde 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="quote-icon">"</div>
+                            <div class="stars">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="review-text">
+                                Fantástico! Melhor experiência que já tive. A comunicação foi clara, o resultado superou minhas expectativas e o suporte pós-venda é excepcional!
+                            </p>
+                            <div class="reviewer-info">
+                                <img src="https://i.pravatar.cc/150?img=20" alt="Juliana Mendes" class="reviewer-photo">
+                                <div class="reviewer-details">
+                                    <h4>Juliana Mendes</h4>
+                                    <p>Cliente desde 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" aria-label="Anterior">‹</button>
+                <button class="carousel-btn" id="nextBtn" aria-label="Próximo">›</button>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots"></div>
           </div>
         </div>
-      </div>
-    </div>
   </section>
 
   <!-- FOOTER -->
@@ -223,19 +364,15 @@
         <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/384cj33NEXNZiuTV8">Jardins - Aracaju/SE</a></p>
       </div>
       <div class="footer-column">
-        <h3>Redes Sociais</h3>
-        <p>Acompanhe conteúdos sobre saúde mental e bem-estar:</p>
-        <div class="social-links">
-          <a href="https://wa.me/5579998556740" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <a href="https://instagram.com/psimeirefranca" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="mailto:meire_franca@hotmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
+        <h3>Planos de Saúde</h3>
+        <p>Confira os planos aceitos:</p>
+        <ul>
+          <li>Unimed</li>
+          <li>Amil</li>
+          <li>Bradesco Saúde</li>
+          <li>Porto Seguro</li>
+          <li>SulAmérica</li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
