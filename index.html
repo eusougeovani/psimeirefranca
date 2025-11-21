@@ -11,19 +11,19 @@
 </head>
 <body>
   <!-- NAVEGAÇÃO FIXA NO TOPO -->
-  <section id="top">
+  <section id="home">
     <nav class="nav-header">
       <div class="nav-container">
         <div class="nav-logo">
-          <a href="#top"><img src="img/logoBorboClara.png" alt="Logo Meire França"></a>
-          <a href="#top"><span>Meire França</span></a>
+          <a href="#home"><img src="img/logoBorboClara.png" alt="Logo Meire França"></a>
+          <a href="#home"><span>Meire França</span></a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
         </button>
-        <div class="nav-menu">
+        <div class="nav-menu" id="navMenu">
           <a href="#sobre">Sobre mim</a>
           <a href="#servicos">Serviços</a>
           <a href="#atendimento">Atendimento</a>
@@ -36,7 +36,7 @@
   </section>
 
   <!-- HERO SECTION -->
-  <section id="home" class="hero">
+  <section class="hero">
     <div class="hero-content">
       <div class="logo-circle">
         <img src="img/logoBorboEscura.png" alt="Logo Meire França">
@@ -57,7 +57,7 @@
   </section>
 
   <!-- SEÇÃO SOBRE -->
-  <section id="sobre" class="localizacao-section">
+  <section class="localizacao-section">
     <div class="container">
       <div class="sobre-card">
         <div class="foto-destaque">
@@ -67,7 +67,7 @@
           <div class="foto-decoracao"></div>
         </div>
         <div class="sobre-texto">
-          <h2>Sobre mim</h2>
+          <h2 id="sobre">Sobre mim</h2>
           <p>Olá, sou Meire França, psicóloga especializada em Psicologia Humanista com abordagem centrada na pessoa. Meu objetivo é oferecer um espaço seguro e acolhedor onde você possa se expressar livremente.</p>
           <ul class="sobre-lista">
             <li>
@@ -93,10 +93,10 @@
   </section>
 
   <!-- SEÇÃO SERVIÇOS -->
-  <section id="servicos" class="localizacao-section">
+  <section class="localizacao-section">
     <div class="container">
       <div class="localizacao-card">
-        <h2>Serviços</h2>
+        <h2 id="servicos">Serviços</h2>
         <div class="local-info">
           <i class="fas fa-user-group"></i>
           <div>
@@ -116,10 +116,10 @@
   </section>
 
   <!-- SEÇÃO ATENDIMENTO -->
-  <section id="atendimento" class="localizacao-section">
+  <section class="localizacao-section">
     <div class="container">
       <div class="localizacao-card">
-        <h2>Atendimento</h2>
+        <h2 id="atendimento">Atendimento</h2>
         <div class="local-info">
           <i class="fas fa-home"></i>
           <div>
@@ -160,10 +160,10 @@
   </section>
 
   <!-- SEÇÃO CONTATO -->
-  <section id="contato" class="localizacao-section">
+  <section class="localizacao-section">
     <div class="container">
       <div class="localizacao-card">
-        <h2>Contato</h2>
+        <h2 id="contato">Contato</h2>
         <!-- Cards de Contato -->
         <div class="contact-cards">
           <!-- Card Endereço -->
@@ -211,10 +211,10 @@
   </section>
 
   <!-- SEÇÃO AVALIAÇÕES -->
-  <section id="avaliacoes" class="localizacao-section">
+  <section class="localizacao-section">
         <div class="container">
           <div class="localizacao-card">
-            <h2>Avaliações</h2>
+            <h2 id="avaliacoes">Avaliações</h2>
             <div class="carousel-container">
                 <div class="carousel-wrapper" id="carouselWrapper">
                     <!-- Review 1 -->
